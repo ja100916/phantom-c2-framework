@@ -39,3 +39,17 @@ A lightweight, custom command and control (C2) framework designed for security r
 git clone https://github.com/yourusername/phantom-c2-framework
 cd phantom-c2-framework
 pip install -r server/requirements.txt
+```
+
+### Server Setup
+```bash
+cd server
+python c2_server.py --domain your-controlled-domain.com
+```
+
+### Agent Deployment
+```bash
+from agent.phantom_agent import PhantomAgent
+agent = PhantomAgent(server_domain="your-controlled-domain.com")
+agent.start()
+```
